@@ -119,9 +119,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/templates/pybo/sun_work/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / '/templates/pybo/sun_work/',
+    BASE_DIR / 'static',
 ]
 
 # 로그인 성공후 이동하는 URL
