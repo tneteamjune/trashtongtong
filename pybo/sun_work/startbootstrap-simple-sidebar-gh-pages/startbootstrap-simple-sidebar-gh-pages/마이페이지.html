@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+</head>
+
+<body>
+    <form action="/action_page.php" method="get">
+        이 름: <input type="text" name="ireum"><br>
+        핸드폰: <input type="text" name="phone"><br>
+        <button type="submit">접속</button>
+    </form>
+    <button onclick="goForward()">뒤로가기</button>
+    <script>
+    function goForward() {
+        window.history.forward();
+    }
+    </script>
+
+</body>
+</html>

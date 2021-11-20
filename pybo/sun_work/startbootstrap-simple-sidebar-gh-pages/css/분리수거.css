@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <body>
+        <img src="올바른분리수거.jpg" alt = "올바른분리수거" style="width:500px; height"800px;">
+    </body>
+</html>
+/* <!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>올바른 분리수거</title>
+        <style>
+            div {
+                    width : 400px;
+            }
+        </style>
+    </head>
+    <body>
+            <div>
+            <img src="images/올바른분리수거.jpg" alt="올바른분리수거 이미지">
+            </div>
+    </body>
+</html>*/
+
+/* html{
+    background: url(올바른분리수거.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+} */ 
