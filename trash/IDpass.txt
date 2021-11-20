@@ -1,0 +1,10 @@
+ID rsa-key-20211109
+비번 1111
+내부ip 10.178.0.3
+외부ip 34.64.187.150
+
+putty : rsa-key-20211109@34.64.187.150
+cmd : ssh rsa-key-20211109@34.64.187.150 -p 22 (error)
+
+<putty ? >
+at least 6 characters : rororo
