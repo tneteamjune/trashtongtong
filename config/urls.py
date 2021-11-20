@@ -8,5 +8,5 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls')),
     path('', views.index, name='index'),  # '/' 에 해당되는 path
-    path('', views.test, name='test'), 
+    path('test/', views.test, name='test'), 
 ]
