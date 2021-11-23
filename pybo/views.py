@@ -13,4 +13,4 @@ def mypage(request):
     return render(request, 'pybo/mypage.html')
 
 def greenpoint(request):
-    return render(request, 'pybo/greenpoint.jsp')
+    return render(request, 'pybo/greenpoint.html')
