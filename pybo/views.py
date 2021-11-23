@@ -7,7 +7,7 @@ def notice(request):
     return render(request, 'pybo/sun_work/notice.html')
 
 def tip(request):
-    return render(request, 'pybo/sun_work/tip.html')
+    return render(request, 'pybo/sun_work/tip.jsp')
 
 def mypage(request):
     return render(request, 'pybo/sun_work/mypage.html')
