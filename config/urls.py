@@ -10,5 +10,6 @@ urlpatterns = [
     path('', views.index, name='index'),  # '/' 에 해당되는 path
     path('notice/', views.notice, name='notice'),
     path('tip/', views.tip, name='tip'),
-    path('mypage/', views.mypage, name='mypage'), 
+    path('mypage/', views.mypage, name='mypage'),
+    path('greenpoint/', views.greenpoint, name='greenpoint'), 
 ]
