@@ -8,4 +8,7 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls')),
     path('', views.index, name='index'),  # '/' 에 해당되는 path
+    path('notice/', views.notice, name='notice'),
+    path('tip/', views.tip, name='tip'),
+    path('mypage/', views.mypage, name='mypage'), 
 ]
