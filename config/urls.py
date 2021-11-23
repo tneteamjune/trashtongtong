@@ -11,5 +11,7 @@ urlpatterns = [
     path('notice/', views.notice, name='notice'),
     path('tip/', views.tip, name='tip'),
     path('mypage/', views.mypage, name='mypage'),
-    path('greenpoint/', views.greenpoint, name='greenpoint'), 
-]
+    path('greenpoint/', views.greenpoint, name='greenpoint'),
+    ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
