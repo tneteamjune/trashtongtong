@@ -7,5 +7,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('notice/', views.notice, name='notice'),
     path('tip/', views.tip, name='tip'),
-    path('mypage/', views.mypage, name='mypage'), 
+    path('mypage/', views.mypage, name='mypage'),
+    path('greenpoint/', views.greenpoint, name='greenpoint'), 
    ]
