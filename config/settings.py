@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / '/templates/pybo/sun_work/',
+    BASE_DIR / './templates/pybo/sun_work/',
 ]
 
 # 로그인 성공후 이동하는 URL
