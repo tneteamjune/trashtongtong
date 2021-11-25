@@ -1065,11 +1065,17 @@
             // 마커가 지도 위에 표시되도록 설정합니다
             marker.setMap(map);  
 
+        var content = '<div class="customoverlay">' +
+            '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
+            '    <span class="title">휴지통통</span>' +
+            '  </a>' +
+            '</div>';
+
             // 커스텀 오버레이를 생성합니다
             var customOverlay = new kakao.maps.CustomOverlay({
                 map: map,
                 position: positions[i].latlng,
-                content: positions[i].content,
+                content: content,
                 yAnchor: 1 
                 });
         }
