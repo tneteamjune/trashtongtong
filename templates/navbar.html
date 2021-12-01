@@ -18,23 +18,42 @@
     </div>
 </nav> {% endcomment %}
 
-<!-- Top navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-        <button class="btn btn-primary" id="sidebarToggle">메뉴보기/감추기</button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href='http://34.64.187.150:8000/common/signup/'>회원가입</a></li>
-                <li class="nav-item"><a class="nav-link" href='http://34.64.187.150:8000/common/login/'>로그인</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">admin</a>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href='http://34.64.187.150:8000/admin/'>관리자페이지</a>
-                        <div class="dropdown-divider"></div>
-                    </div>
-                </li>
-            </ul>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom bg-light" style="font-size:25px";><b>휴지통을 찾아서</b></div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" 
+            style="font-size:20px";input type="button" onclick=href={% url 'tip' %}>재활용 팁</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" 
+            style="font-size:20px";input type="button" onclick=href={% url 'greenpoint' %}>초록점수 적립</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" 
+            style="font-size:20px";input type="button" onclick=href={% url 'notice' %}>공지사항</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" 
+            style="font-size:20px";input type="button" onclick=href={% url 'mypage' %}>마이페이지</a>
         </div>
     </div>
-</nav>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <button class="btn btn-primary" id="sidebarToggle">메뉴보기/감추기</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href='http://34.64.187.150:8000/common/signup/'>회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href='http://34.64.187.150:8000/common/login/'>로그인</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">admin</a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href='http://34.64.187.150:8000/admin/'>관리자페이지</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
