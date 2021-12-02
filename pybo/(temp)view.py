@@ -4,11 +4,13 @@ from .models import Question
 from .forms import QuestionForm, AnswerForm
 from django.core.paginator import Paginator  
 from django.contrib.auth.decorators import login_required
-from common import forms
 
 def index(request):
     return render(request, 'pybo/index.html')
  
+# def notice(request):
+#     return render(request, 'pybo/notice.html')
+
 def tip(request):
     return render(request, 'pybo/tip.html')
 
@@ -80,19 +82,3 @@ def question_create(request):
         form = QuestionForm()
     context = {'form': form}
     return render(request, 'pybo/question_form.html', context)
-
-
-@login_required(login_url='common:login')
-def mypage(request):
-    """
-    mypage 구현
-    """
-    myuser = request.user
-    pic_url = ''
-
-    context = {
-        'id': myuser.username,
-        'email': myuser.email,
-        'picture': pic_url,
-        }
-    return render(request, 'pybo/mypage.html', context=context)

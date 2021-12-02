@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% load pybo_filter %}
 {% block content %}
-    화면크기가 작아져버렸어요 ?_?
+    <div style="margin-left: 20px;">
+    <h2>mypage</h2>
+</br>
+    <p>ID : {{ id }} </p>
+    <p>이메일 : {{ email }} </p>
+    <p>초록점수 : - </p>
+</br>
+    <p><img src="/static/image/stardol2.png" alt = "profile" style="width:300px;height:350px;">
+    </div>
+</br>
+
 {% endblock %}
