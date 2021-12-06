@@ -12,6 +12,18 @@ def index(request):
 def tip(request):
     return render(request, 'pybo/tip.html')
 
+def plastic(request):
+    return render(request,'pybo/plastic.html')
+
+def glass(request):
+    return render(request,'pybo/glass.html')
+
+def balpo(request):
+    return render(request,'pybo/balpo.html')
+
+def vinyl(request):
+    return render(request,'pybo/vinyl.html')
+
 def mypage(request):
     return render(request, 'pybo/mypage.html')
 
