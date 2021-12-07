@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import transaction
+from django.utils import timezone
+
+now = timezone.now()
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -36,10 +39,19 @@ class PointsEntry(models.Model):
     def __str__(self):
         return str(self.date) + "-" + str(self.user)
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        relatedEntries = PointsEntry.objects.filter(user=self.user)
-        self.user.profile.greenpoint = sum([entry.points for entry in relatedEntries])
-        self.user.save()
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
+    #     relatedEntries = PointsEntry.objects.filter(user=self.user)
+    #     self.user.profile.greenpoint = sum([entry.points for entry in relatedEntries])
+    #     self.user.save()
+
+@receiver(post_save, sender=User)
+def create_user_points(sender, instance, created, **kwargs):
+    if created:
+        obj = PointsEntry.objects.create(user = instance)
+        obj.points = 10
+        obj.reason = "welcome point"
+        obj.save()
+
 
 

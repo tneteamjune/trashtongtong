@@ -1,7 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from common.models import Profile
+from common.models import Profile, PointsEntry
+from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
 
 
 # ID = username
@@ -21,6 +23,10 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('phone', 'greenpoint')
         
+class PointsForm(forms.ModelForm):
+    class Mata :
+        model = PointsEntry
+        field = ('user', 'date', 'points', 'reason')
 
 # class PointsForm(forms.Form):
 

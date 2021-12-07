@@ -18,11 +18,11 @@
       <div class ="student-breakdown">
         <div class= "shadow text-center">
           <div class="lineage">
-            <h1 class='text-white'>{{ student }}</h1>
+            <h1 class='text-white'>{{ user }}</h1>
           </div>
-          {% with percent=student.points|divide:totalPoints %}
+          {% with percent=user.profile.greenpoint|divide:totalPoints %}
           <div class ="hr-large lineage"></div>
-          <h1 class = "text-info lineage">{{ student.points }} points</h1>
+          <h1 class = "text-info lineage">{{ user.profile.greenpoint }} points</h1>
           {% endwith %}
           <div class="collapsable spacedCol text-left">
             <p>
@@ -52,10 +52,10 @@
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: [ '{{student}} points', "Other points"],
+                        labels: [ '{{user}} points', "Other points"],
                         datasets: [{
                             label: 'Point distribution',
-                            data: [ {{ student.points }}, {{ totalPoints }}-{{student.points}} ],
+                            data: [ {{ user.profile.greenpoint }}, {{ totalPoints }}-{{user.profile.greenpoint}} ],
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)'
