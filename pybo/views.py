@@ -5,8 +5,12 @@ from .forms import QuestionForm, AnswerForm
 from django.core.paginator import Paginator  
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from common.models import Profile, PointsEntry
+from common.models import Profile, PointsEntry, hashUserNo
 from common.forms import PointsForm
+from django.contrib import messages
+from django.utils.translation import ugettext_lazy as _
+from django.core.exceptions import ValidationError
+from django.http import HttpResponse
 
 def index(request):
     return render(request, 'pybo/index.html')
@@ -15,16 +19,16 @@ def tip(request):
     return render(request, 'pybo/tip.html')
 
 def plastic(request):
-    return render(request,'pybo/plastic.html')
+    return render(request,'pybo/tip/plastic.html')
 
 def glass(request):
-    return render(request,'pybo/glass.html')
+    return render(request,'pybo/tip/glass.html')
 
 def balpo(request):
-    return render(request,'pybo/balpo.html')
+    return render(request,'pybo/tip/balpo.html')
 
 def vinyl(request):
-    return render(request,'pybo/vinyl.html')
+    return render(request,'pybo/tip/vinyl.html')
 
 # def mypage(request):
 #     return render(request, 'pybo/mypage.html')
@@ -214,6 +218,43 @@ def points_detail(request, id):
     }
     print(context)
     return render(request, 'pybo/points_detail.html', context)
+
+def create_user_points(sender, instance, created, **kwargs):
+    if created:
+        obj = PointsEntry.objects.create(user = instance)
+        obj.points = 10
+        obj.reason = "welcome point"
+        obj.save()
+
+@login_required(login_url='common:login')
+def points_get(request):
+    form = PointsForm(request.POST or None)
+    if request.method == "POST":
+        form = PointsForm(request.POST)
+    
+        if form.is_valid():
+            formInput = form.cleaned_data
+            newID = hashUserNo(formInput['user'])
+            if User.objects.filter(userNo=newID).exists() == False:
+                newID = hashUserNo(formInput['user'])
+                newUser = User(userNo=formInput['user'], firstName=(formInput['firstName']).lower(), lastName=(formInput['lastName']).lower(), points=0)
+                newUser.save()
+        
+        # currentUser = User.objects.filter(userNo=request.user.id).first()
+
+        # for object in PointsEntry.objects.filter(user=request.user.id):
+        #     if object.reason == pointentry.reason :
+        #         # raise ValidationError(_('Points already added.'))
+        #         return HttpResponse('Points already added.')
+
+        messages.success(request, 'Request submitted succesfully!')
+        form.save()
+        form = PointsForm()
+        # Save the form. Also adds a point entry
+    context = {
+        'form' : form,
+    }
+    return render(request, 'pybo/points_get.html', context)
 
 
 def points_entrys(request):

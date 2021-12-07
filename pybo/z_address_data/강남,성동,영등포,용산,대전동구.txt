@@ -1,3 +1,1340 @@
+var positions = [
+{
+title:'일반쓰레기수거용',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 강변삼성아파트앞 횡단보도 버스정류장(03-299)  '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구  원효로4가 현대자동차써비스(원효로3가방면) 버스정류장(03-301) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구  목월공원 앞 '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구  원효로 3가 시범아파트 버스정류장(03-146) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53986578,126.9689844),
+content: '<div style="padding:5px;">서울특별시 용산구  원효로1가 45  (유닉스빌딩앞 버스정류장(03-140) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구  원효로 3가 우리 이비인후과 앞(원효아파트앞횡단보도) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구  원효로 2가 사거리 열린동물병원앞 '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구  (구)용산구청앞 사거리 (우리은행) 횡단보도 '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구  용산경찰서 입구(GS25 편의점앞) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구  선린인터넷고등학교 입구( CU편의점앞 ) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 (구)용산구청 보건분소앞 사거리(해오름공인중개사)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 소화아동병원앞(택시정류장)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.55258491,126.9664327),
+content: '<div style="padding:5px;">서울특별시 용산구 청파동(서계동방면) 버스정류장(03-126)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.81515435,128.6131436),
+content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역청파동주민센터(세운할인마트앞)버스정류장(13-129)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.81515435,128.6131436),
+content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역청파동주민센터버스정류장(03-128)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동종합사회복지관 택시정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 용산고등학교 앞 사거리( 구두 수선앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 스마일치과의원 건너편 버스정류장(03-203)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 SC제일은행앞 버스정류장(03-201)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 후암시장(삼강의원방면) 버스정류장(03-200)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
+content: '<div style="padding:5px;">서울특별시 용산구 후암삼거리 버스정류장(03-199) 클라라 잡화'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 진흥빌딩 앞 마을버스정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 진흥빌딩 건너편 그랜드아파트 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구 원효로1가 선린교차로 현수막 거치대옆(남영지하차도입구)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 전자상가관광터미널(신용산역3번출구방면) 버스정류장(03-25203-558)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가 삼구빌딩 하나은행(원효대교북단방면) 버스정류장(03-138)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지 고가 등기소 건너편 마을버스정류장(03-552)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 (구)용산구청 보건분소 앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 효창공원역 2번출구(효창동물병원)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 효창공원역 3번출구(버스정류장03-180)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 푸르지오아파트앞 버스정류장(03-178)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 손기정 버스정류장(03-228)(육교밑 사과나무부동산앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 현대아파트 버스정류장(03-223)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 강촌아파트 버스정류장(03-221)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산 초등학교 건너편(이상윤동물병원앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌파출소앞 버스정류장(03-217)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 동부이촌동 국민은행앞 '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌동두산위브아파트앞 버스정류장(03-21503-733)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 두산위브아파트앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강맨션앞 버스정류장(이민재 소아청소년과)(03-218)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌2동 주민센터(이촌2동대림아파트방면) 버스정류장(03-291) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌2동 주민센터(이촌2동부영주유소방면) 버스정류장(03-290)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 대림아파트 버스정류장(03-293)(새남터성당입구횡단보도)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 강변맨션앞 버스정류장(03-295)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.14683718,126.9098456),
+content: '<div style="padding:5px;">서울특별시 용산구 동아아파트 건너편 버스정류장(03-294 함흥냉면 앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 (구)용산중대병원앞 버스정류장(03-259)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산공업고등학교앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌역 2번출구'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 온누리교회앞 버스정류장(03-728)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 철우아파트 옆 버스정류장(03-261)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국립중앙박물관 정문앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국립중앙박물관 버스정류장(가족공원쪽)(03-266)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54699639,126.9780103),
+content: '<div style="padding:5px;">서울특별시 용산구 후암로11 채가네볼태기앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 후암시장(우측)입구 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한남시범아파트버스정류장(03-211)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서울역공항철도15번출구국립극단버스정류장(03-345)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한남2치안센터옆 공원입구'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 한남오거리(순천향대학방면-북한남삼거리방면) 버스정류장(03-166)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강중학교(반포한강공원방면) 버스정류장(03-156)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강중학교건너편(용산구청방면) 버스정류장(03-155)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산구청크라운 호텔(한강중학교앞방면) 버스정류장(03-154)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산구청크라운 호텔(국군재정관리단방면) 버스정류장(03-153)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.27633518,127.3611005),
+content: '<div style="padding:5px;">서울특별시 용산구 국군재정관리단앞(이태원동남산대림아파트용산동아파트방면) 버스정류장(03-152)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 해방촌(용산구청크라운호텔방면) 버스정류장(03-151)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용암초등학교입구(남산3호터널앞) 버스정류장(03-148)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 방태산식당앞(이촌2동주민센터문화시설보건소셔틀버스정류장)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남산도서관앞(두텁바위마을표지석앞) 버스정류장(03-168)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남산도서관(백범광장방면) 버스정류장(03-167)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 후암약수터(보성여중고입구방면) 버스정류장(03-170)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 보성여중고입구(후암약수터방면) 버스정류장(03-171)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남산체육관(하얏트호텔방면) 버스정류장(03-174)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 하얏트 호텔(남산체육관방면) 버스정류장(03-175)이광희뷰티크건너편'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 하얏트 호텔(서울시중부기술교육원블루스퀘어방면) 버스정류장(03-176)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 보성여중고입구(용암초등학교이태원2동주민센터방면) 버스정류장(용산2가동주민센타올라오는계단끝)(03-172)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 LG유플러스앞 횡단보도(도심)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52734784,126.9664962),
+content: '<div style="padding:5px;">서울특별시 용산구 한강로 2가 222-5(한강로 블루컷앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52734784,126.9664962),
+content: '<div style="padding:5px;">서울특별시 용산구 한강로 2가 222-5(한강로 블루컷 건너편 용산역방향 횡단보도)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산우체국앞( 택시정류장앞 )'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역 마을버스정류장(03-561)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT 용산지점 마을버스정류장(03-564) 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT 앞 중앙버스정류장 횡단보도(피터팬부동산)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역 버스정류장(03-229)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지 안전지대 횡단보도 (LG자이아파트 앞 )'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 아웃백스테이크하우스 남영점앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신한은행 숙명여대입구역점앞(서울역방면)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동 갑을빌딩 앞(왕십리뉴타운1구역모델하우스)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54841679,126.9719143),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동 숙대입구 지하철역 9번출구앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙명여대 중앙버스정류장(롯데리아 앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남영역 고려빌딩 앞 (우)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 게이트웨이타워 버스정류장(03-198) 옆 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남영역 마을버스정류장 (03-535)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 남영역 앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.527687,126.9668087),
+content: '<div style="padding:5px;">서울특별시 용산구 한강로2가 225-6(용산M치과의원 건너편 횡단보도)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.89727927,128.5156937),
+content: '<div style="padding:5px;">서울특별시 용산구 한강로동 베르가모(농협앞) 버스정류장(03-122)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 베르가모앞 택시정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역앞 횡단보도 건너편'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산지하차도입구 파리바게트 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용사의집앞 횡단보도(가로판매점앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한남역용산노인종합복지관(한남동 하이페리온방면) 버스정류장(03-285)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 택시정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53471374,126.94526),
+content: '<div style="padding:5px;">서울특별시 용산구 원효로 2동 주민센터 버스정류장(03-304)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
+content: '<div style="padding:5px;">서울특별시 용산구 보광동 신동아아파트(기업은행보광동지점방면) 버스정류장(03-277)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 하얏트호텔 정문앞 마을버스정류장(용산03)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
+content: '<div style="padding:5px;">서울특별시 용산구 한남동 동원베네스트 사잇길 옆 쉼터'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
+content: '<div style="padding:5px;">서울특별시 용산구 한남동(한남시범아파트방면) 버스정류장(03-213)(현대리버티하우스KEB하나은행앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 보금사에서 스시바얼이태원점앞(녹사평산악회앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.6663724,128.4223574),
+content: '<div style="padding:5px;">서울특별시 용산구 금호타이어한남대리점(시드니씨푸드)앞(경리단입구3호터널방향)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강진역 1번출구앞 (용산국제학교입구)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54795891,126.9842371),
+content: '<div style="padding:5px;">서울특별시 용산구 소월로168번지(고엽제사무실옆)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한국폴리텍1대학 버스정류장(03-281)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 도이치모터스(BMW) 매장앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-524)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 진출로 옆 인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 진입로 옆 인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌2동부영주유소 건너편 버스정류장(03-288)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
+content: '<div style="padding:5px;">서울특별시 용산구 이촌1동 충신교회앞 버스정류장(03-216) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 콩나물국밥 시루향기 24시 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54199535,126.9709845),
+content: '<div style="padding:5px;">서울특별시 용산구 청파로 250(남영역03-230버스정류장옆)앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54795891,126.9842371),
+content: '<div style="padding:5px;">서울특별시 용산구 소월로168번지(대한민국고엽제전우회앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 하얏트호텔 정문앞 마을버스정류장(용산03)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 3번 출구 앞( 직진2~3미터횡단보도앞 )'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 3번 출구 앞( 직진2~3미터횡단보도앞 )'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원입구(수지스건너편) 공중화장실앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원입구(수지스건너편) 공중화장실앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-189) 아디다스 OFS점 앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-189) 아디다스 OFS점 앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-188)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-188)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국제아케이드건물 앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국제아케이드건물 앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 ABC마트(신발가게)앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 ABC마트(신발가게)앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 미스전콜렉션앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 미스전콜렉션앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 해밀턴호텔 버스정류장(03-190)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 해밀턴호텔 버스정류장(03-190)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원역 2번 출구 (해밀턴호텔정문앞횡단보도)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원역 2번 출구 (해밀턴호텔정문앞횡단보도)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원역 3번 출구 (올리브영 횡단보도앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원역 3번 출구 (올리브영 횡단보도앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원소방서건너편사거리 뉴욕콜롬비아치과앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원소방서건너편사거리 뉴욕콜롬비아치과앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원 119 안전센타 버스정류장(03-192)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원 119 안전센타 버스정류장(03-192)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 제일기획실앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 제일기획실앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 시화담그릴(이태원로254(한남동683-130)앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 시화담그릴(이태원로254(한남동683-130)앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.27633518,127.3611005),
+content: '<div style="padding:5px;">서울특별시 용산구 삼성미술관 리움 택시정류장(폭스바겐건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.27633518,127.3611005),
+content: '<div style="padding:5px;">서울특별시 용산구 삼성미술관 리움 택시정류장(폭스바겐건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원광장 녹사평역방향 횡단보도(좌측)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원광장 녹사평역방향 횡단보도(좌측)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산구청 셔틀버스 정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산구청 셔틀버스 정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
+content: '<div style="padding:5px;">서울특별시 용산구 보광동입구(한국폴리텍1대학방면) 버스정류장(03-283)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
+content: '<div style="padding:5px;">서울특별시 용산구 보광동입구(한국폴리텍1대학방면) 버스정류장(03-283)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강진역 블루스퀘어 버스정류장(03-197)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강진역 블루스퀘어 버스정류장(03-197)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(블루스퀘어방면) 버스정류장(03-162)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(블루스퀘어방면) 버스정류장(03-162)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원한남오거리(신사역방면) 버스정류장(03-165)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원한남오거리(신사역방면) 버스정류장(03-165)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 한남오거리 하나은행앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
+content: '<div style="padding:5px;">서울특별시 용산구 한남오거리 하나은행앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대교북단(신용산방면) 중앙버스정류장(도심03-001))'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대교북단(노들섬방면) 중앙버스정류장(외곽03-002)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역(KT용산지사방면) 중앙버스정류장(도심 03-003)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역(한강대교북단방면) 중앙버스정류장(외곽03-004)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역(한강대교북단방면) 중앙버스정류장(외곽03-004)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(숙대입구방면) 중앙버스정류장(도심03-007)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(KT용산지사방면) 중앙버스정류장(외곽03-008)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(KT용산지사방면) 중앙버스정류장(외곽03-008)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(KT용산지사방면) 중앙버스정류장(외곽03-008)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙명여대(갈월동방면) 중앙버스정류장(도심03-009)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙명여대(삼각지역방면) 중앙버스정류장(외곽03-010)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동(서울역버스환승센터방면) 중앙버스정류장 (도심03-011)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동(숙대입구방면) 중앙버스정류장 (외곽03-012)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53884125,126.991128),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원2동 용산한신아파트앞(해방촌방면) 버스정류장(03-150)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53884125,126.991128),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원2동 용산한신아파트앞(해방촌방면) 버스정류장(03-150)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(보훈청방향)평양집앞 공원쉼터'
+},
+{
+title:' 재활용수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지(보훈청방향)평양집앞 공원쉼터'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국방부앞 버스정류장(국방부민원실)(03-185)'
+},
+{
+title:' 재활용수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 국방부앞 버스정류장(국방부민원실)(03-185)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 전쟁기념관(용산보건분소방면) 버스정류장(03-184)'
+},
+{
+title:' 재활용수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 전쟁기념관(용산보건분소방면) 버스정류장(03-184)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-186)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-186)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 4번 출구 앞 버스정류장(03-187)'
+},
+{
+title:' 재활용수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 4번 출구 앞 버스정류장(03-187)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역 버스정류장(03-255)(용산역앞광장)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역 버스정류장(03-255)(용산역앞광장)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역광장앞(신용산지하차도방면) 버스정류장(03-258) '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 삼각지역11번출구 버스정류장(03-328남영역방면)(용산역파출소옆)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서빙고역 교차로 버스정류장(03-267서빙고역건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서빙고역1번출구 버스정류장(03-157서빙고역앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서빙고초등학교앞버스정류장(03-268GS편의점)  '
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 원효대교 북단 버스정류장(03-331 삼구빌딩 건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역 5번출구 마을버스정류장(03-565 하나은행숙대입구역지점앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동 마을버스정류장(03-568 삼성디지탈서비스센터옆)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.55024242,126.9725935),
+content: '<div style="padding:5px;">서울특별시 용산구 갈월동 4호선 숙대입구 버스정류장(03-327 여행박사앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54302455,126.9733195),
+content: '<div style="padding:5px;">서울특별시 용산구 남영동 청도양꼬치남영점앞 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 리버힐삼성아파트옆GS25시편의점앞횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가입구 버스정류장(03-250)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산 꿈나무 종합타운 보건분소 버스정류장(03-181)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한남나들목(A) 출입구앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한남나들목(B) 출입구앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 크라운해태 건너편 USO건너편인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 크라운해태 건너편 USO건너편인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52374199,126.9620444),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 숙대입구역2번출구앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52374199,126.9620444),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 숙대입구역2번출구앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 갈월동 청파동입구교차로(쌍굴다리)안 공원(갑을빌딩 맞은편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 갈월동청파동 입구교차로(쌍굴다리)안 공원(갑을빌딩 맞은편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
+content: '<div style="padding:5px;">서울특별시 용산구 남영삼거리 동원부동산앞 횡단보도(고려빌딩 건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
+content: '<div style="padding:5px;">서울특별시 용산구 남영삼거리 동원부동산앞 횡단보도(고려빌딩 건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역 삼거리 횡단보도앞(신용산역 5번출구 뒷편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산역 삼거리 횡단보도앞(신용산역 5번출구 뒷편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.55454856,126.9728045),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역앞교차로 아우디한강대로전시장앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.55454856,126.9728045),
+content: '<div style="padding:5px;">서울특별시 용산구 용산역앞교차로 아우디한강대로전시장앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원주공아파트 담벽인도 남산공원이정표앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서울시중부기술교육원블루스퀘어(순천향대학병원한남오거리방면)(03161)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서울시중부기술교육원블루스퀘어(순천향대학병원한남오거리방면)(03161)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한강중학교(금호베스트빌앞방면)버스정류장(03-269)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52358498,126.9957871),
+content: '<div style="padding:5px;">서울특별시 용산구 동빙고동(한남역용산노인종합복지관방면)버스정류장(03-274)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53884125,126.991128),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원동남산대림아파트용산동아파트(114공인중개사사무소앞) 버스정류장(03-149)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가 전자랜드(원효대교북단방면)버스정류장(03-137)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 원효2동산호아파트(청암동강변삼성아파트방면)버스정류장(03-300)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54083138,126.9570712),
+content: '<div style="padding:5px;">서울특별시 용산구 백범로 효창공원역4번출구앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 BMW 한독모터스용산전시장 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역 34번출구앞(군선도가게앞)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(35.11564857,126.6991514),
+content: '<div style="padding:5px;">서울특별시 용산구 서빙고신동아아파트/신동아아파트버스정류장(03226)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT용산지사(삼각지방면)중앙버스정류장(도심03-005)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT용산지사(삼각지방면)중앙버스정류장(도심03-005)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT용산지사(신용산역방면)중앙버스정류장(외곽03-006)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KT용산지사(신용산역방면)중앙버스정류장(외곽03-006)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산푸르지오써밋오피스텔(해림턴부동산과스타부동산)앞 인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산푸르지오써밋오피스텔(서울창조경제혁신센터)앞 인도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가 전자랜드(용산전자상가12동방면)버스정류장(03136)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 신용산지하차도(용산전자상가입구방면)버스정류장(03251)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산꿈나무종합타원(용산경찰서방면)버스정류장(03346)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53714128,126.9691998),
+content: '<div style="padding:5px;">서울특별시 용산구 문배동이안아파트앞(문배어린이공원방면)버스정류장(03332)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 금양초등학교앞횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.5435614,126.9597807),
+content: '<div style="padding:5px;">서울특별시 용산구 국민은행효창동지점(숙명여대정문방면)버스정류장(03240)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 숙명여대후문 이봉창활동터(효창공원후문방면)버스정류장(03235)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서부역건너편 미니스톱서울역점 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 용산세무서(용산공고방면)버스정류장((03262)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 기능장애인협회용산지부앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 GS25용산서빙고점(서빙고초등학교)앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 녹사평역3번출구 200M전방(용산구청방향) 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 미군부대정문앞 횡단보도(한강중학교방면)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 금호베스트빌앞(서빙고초등학교방면)버스정류장(03270)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 KY빌딩앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원랜드앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
+content: '<div style="padding:5px;">서울특별시 용산구 한남동 대성표구사앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
+content: '<div style="padding:5px;">서울특별시 용산구 한남동새마을금고(이태원119안전센터방면)버스정류장(03194)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
+content: '<div style="padding:5px;">서울특별시 용산구 한남동 올리브영한남동점(제일기획건너편)앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.54302455,126.9733195),
+content: '<div style="padding:5px;">서울특별시 용산구 남영동주민센터(남영우체국방면)버스정류장(03206)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 성촌공원포르쉐센터용산(이촌2동쥔센터방면)버스정류장(03-289)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 강촌apt/신용산초등학교(이촌동점보아파트방면)버스정류장(03-220)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 한국철도공사(코레일서울본부)앞 모범택시정류장'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 우아한청년들앞 횡단보도'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 이태원 지샥 패션잡화점 횡단보도앞'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
+content: '<div style="padding:5px;">서울특별시 용산구 서빙고초등학교 담벽 가로등주변(남영비비안 본사 건너편)'
+},
+{
+title:' 일반쓰레기수거용 ',
+latlng: new kakao.maps.LatLng(37.52743799,126.9653798),
+content: '<div style="padding:5px;">서울특별시 용산구 한강대로 69(용산써밋오피스텔 정문앞 인도)'
+},
+
 {
 title:'① 일반쓰레기',
 latlng: new kakao.maps.LatLng(37.52539723,126.909032),
@@ -2774,1343 +4111,6 @@ content: '<div style="padding:5px;">서울특별시 성동구 살곶이 8길 22 
 title:'"담배꽁초',
 latlng: new kakao.maps.LatLng(37.54850134,127.0628189),
 content: '<div style="padding:5px;">서울특별시 성동구 광나루로 297 버스정류장'
-},
-
-
-{
-title:'일반쓰레기수거용',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 강변삼성아파트앞 횡단보도 버스정류장(03-299)  '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구  원효로4가 현대자동차써비스(원효로3가방면) 버스정류장(03-301) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구  목월공원 앞 '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구  원효로 3가 시범아파트 버스정류장(03-146) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53986578,126.9689844),
-content: '<div style="padding:5px;">서울특별시 용산구  원효로1가 45  (유닉스빌딩앞 버스정류장(03-140) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구  원효로 3가 우리 이비인후과 앞(원효아파트앞횡단보도) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구  원효로 2가 사거리 열린동물병원앞 '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구  (구)용산구청앞 사거리 (우리은행) 횡단보도 '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구  용산경찰서 입구(GS25 편의점앞) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구  선린인터넷고등학교 입구( CU편의점앞 ) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 (구)용산구청 보건분소앞 사거리(해오름공인중개사)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 소화아동병원앞(택시정류장)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.55258491,126.9664327),
-content: '<div style="padding:5px;">서울특별시 용산구 청파동(서계동방면) 버스정류장(03-126)'
-},
-{
-title:'청파동주민센터(세운할인마트앞)버스정류장(13-129)"',
-latlng: new kakao.maps.LatLng(128.6131436,청파동주민센터(세운할인마트앞)버스정류장(13-129)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'청파동주민센터버스정류장(03-128)"',
-latlng: new kakao.maps.LatLng(128.6131436,청파동주민센터버스정류장(03-128)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
-content: '<div style="padding:5px;">서울특별시 용산구 갈월동종합사회복지관 택시정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 용산고등학교 앞 사거리( 구두 수선앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 스마일치과의원 건너편 버스정류장(03-203)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 SC제일은행앞 버스정류장(03-201)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 후암시장(삼강의원방면) 버스정류장(03-200)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
-content: '<div style="padding:5px;">서울특별시 용산구 후암삼거리 버스정류장(03-199) 클라라 잡화'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 진흥빌딩 앞 마을버스정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 진흥빌딩 건너편 그랜드아파트 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구 원효로1가 선린교차로 현수막 거치대옆(남영지하차도입구)'
-},
-{
-title:'03-558)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-558)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가 삼구빌딩 하나은행(원효대교북단방면) 버스정류장(03-138)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 삼각지 고가 등기소 건너편 마을버스정류장(03-552)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 (구)용산구청 보건분소 앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 효창공원역 2번출구(효창동물병원)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 효창공원역 3번출구(버스정류장03-180)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 푸르지오아파트앞 버스정류장(03-178)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 손기정 버스정류장(03-228)(육교밑 사과나무부동산앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 현대아파트 버스정류장(03-223)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 강촌아파트 버스정류장(03-221)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산 초등학교 건너편(이상윤동물병원앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌파출소앞 버스정류장(03-217)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
-content: '<div style="padding:5px;">서울특별시 용산구 동부이촌동 국민은행앞 '
-},
-{
-title:'03-733)"',
-latlng: new kakao.maps.LatLng(126.9664108,03-733)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 두산위브아파트앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강맨션앞 버스정류장(이민재 소아청소년과)(03-218)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌2동 주민센터(이촌2동대림아파트방면) 버스정류장(03-291) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌2동 주민센터(이촌2동부영주유소방면) 버스정류장(03-290)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 대림아파트 버스정류장(03-293)(새남터성당입구횡단보도)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 강변맨션앞 버스정류장(03-295)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.14683718,126.9098456),
-content: '<div style="padding:5px;">서울특별시 용산구 동아아파트 건너편 버스정류장(03-294 함흥냉면 앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 (구)용산중대병원앞 버스정류장(03-259)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산공업고등학교앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌역 2번출구'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 온누리교회앞 버스정류장(03-728)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 철우아파트 옆 버스정류장(03-261)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국립중앙박물관 정문앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국립중앙박물관 버스정류장(가족공원쪽)(03-266)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54699639,126.9780103),
-content: '<div style="padding:5px;">서울특별시 용산구 후암로11 채가네볼태기앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 후암시장(우측)입구 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한남시범아파트버스정류장(03-211)'
-},
-{
-title:'국립극단버스정류장(03-345)"',
-latlng: new kakao.maps.LatLng(126.9804724,국립극단버스정류장(03-345)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한남2치안센터옆 공원입구'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 한남오거리(순천향대학방면-북한남삼거리방면) 버스정류장(03-166)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강중학교(반포한강공원방면) 버스정류장(03-156)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강중학교건너편(용산구청방면) 버스정류장(03-155)'
-},
-{
-title:'크라운 호텔(한강중학교앞방면) 버스정류장(03-154)"',
-latlng: new kakao.maps.LatLng(126.9804724,크라운 호텔(한강중학교앞방면) 버스정류장(03-154)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'크라운 호텔(국군재정관리단방면) 버스정류장(03-153)"',
-latlng: new kakao.maps.LatLng(126.9804724,크라운 호텔(국군재정관리단방면) 버스정류장(03-153)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'용산동아파트방면) 버스정류장(03-152)"',
-latlng: new kakao.maps.LatLng(127.3611005,용산동아파트방면) 버스정류장(03-152)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'크라운호텔방면) 버스정류장(03-151)"',
-latlng: new kakao.maps.LatLng(126.9804724,크라운호텔방면) 버스정류장(03-151)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용암초등학교입구(남산3호터널앞) 버스정류장(03-148)'
-},
-{
-title:'문화시설보건소셔틀버스정류장)"',
-latlng: new kakao.maps.LatLng(126.9804724,문화시설보건소셔틀버스정류장)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남산도서관앞(두텁바위마을표지석앞) 버스정류장(03-168)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남산도서관(백범광장방면) 버스정류장(03-167)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 후암약수터(보성여중고입구방면) 버스정류장(03-170)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 보성여중고입구(후암약수터방면) 버스정류장(03-171)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남산체육관(하얏트호텔방면) 버스정류장(03-174)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 하얏트 호텔(남산체육관방면) 버스정류장(03-175)이광희뷰티크건너편'
-},
-{
-title:'블루스퀘어방면) 버스정류장(03-176)"',
-latlng: new kakao.maps.LatLng(126.9804724,블루스퀘어방면) 버스정류장(03-176)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'이태원2동주민센터방면) 버스정류장(용산2가동주민센타올라오는계단끝)(03-172)"',
-latlng: new kakao.maps.LatLng(126.9804724,이태원2동주민센터방면) 버스정류장(용산2가동주민센타올라오는계단끝)(03-172)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 LG유플러스앞 횡단보도(도심)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52734784,126.9664962),
-content: '<div style="padding:5px;">서울특별시 용산구 한강로 2가 222-5(한강로 블루컷앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52734784,126.9664962),
-content: '<div style="padding:5px;">서울특별시 용산구 한강로 2가 222-5(한강로 블루컷 건너편 용산역방향 횡단보도)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산우체국앞( 택시정류장앞 )'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산역 마을버스정류장(03-561)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 KT 용산지점 마을버스정류장(03-564) 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 KT 앞 중앙버스정류장 횡단보도(피터팬부동산)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 숙대입구역 버스정류장(03-229)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 삼각지 안전지대 횡단보도 (LG자이아파트 앞 )'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 아웃백스테이크하우스 남영점앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 신한은행 숙명여대입구역점앞(서울역방면)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54493279,126.9715704),
-content: '<div style="padding:5px;">서울특별시 용산구 갈월동 갑을빌딩 앞(왕십리뉴타운1구역모델하우스)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54841679,126.9719143),
-content: '<div style="padding:5px;">서울특별시 용산구 갈월동 숙대입구 지하철역 9번출구앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 숙명여대 중앙버스정류장(롯데리아 앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남영역 고려빌딩 앞 (우)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 게이트웨이타워 버스정류장(03-198) 옆 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남영역 마을버스정류장 (03-535)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 남영역 앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.527687,126.9668087),
-content: '<div style="padding:5px;">서울특별시 용산구 한강로2가 225-6(용산M치과의원 건너편 횡단보도)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.89727927,128.5156937),
-content: '<div style="padding:5px;">서울특별시 용산구 한강로동 베르가모(농협앞) 버스정류장(03-122)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 베르가모앞 택시정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역앞 횡단보도 건너편'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산지하차도입구 파리바게트 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용사의집앞 횡단보도(가로판매점앞)'
-},
-{
-title:'용산노인종합복지관(한남동 하이페리온방면) 버스정류장(03-285)"',
-latlng: new kakao.maps.LatLng(126.9804724,용산노인종합복지관(한남동 하이페리온방면) 버스정류장(03-285)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 택시정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53471374,126.94526),
-content: '<div style="padding:5px;">서울특별시 용산구 원효로 2동 주민센터 버스정류장(03-304)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
-content: '<div style="padding:5px;">서울특별시 용산구 보광동 신동아아파트(기업은행보광동지점방면) 버스정류장(03-277)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 하얏트호텔 정문앞 마을버스정류장(용산03)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
-content: '<div style="padding:5px;">서울특별시 용산구 한남동 동원베네스트 사잇길 옆 쉼터'
-},
-{
-title:'KEB하나은행앞)"',
-latlng: new kakao.maps.LatLng(127.0063494,KEB하나은행앞)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 보금사에서 스시바얼이태원점앞(녹사평산악회앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.6663724,128.4223574),
-content: '<div style="padding:5px;">서울특별시 용산구 금호타이어한남대리점(시드니씨푸드)앞(경리단입구3호터널방향)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강진역 1번출구앞 (용산국제학교입구)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54795891,126.9842371),
-content: '<div style="padding:5px;">서울특별시 용산구 소월로168번지(고엽제사무실옆)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한국폴리텍1대학 버스정류장(03-281)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 도이치모터스(BMW) 매장앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-524)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 진출로 옆 인도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향 병원 진입로 옆 인도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌2동부영주유소 건너편 버스정류장(03-288)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.51877521,126.9664108),
-content: '<div style="padding:5px;">서울특별시 용산구 이촌1동 충신교회앞 버스정류장(03-216) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 콩나물국밥 시루향기 24시 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54199535,126.9709845),
-content: '<div style="padding:5px;">서울특별시 용산구 청파로 250(남영역03-230버스정류장옆)앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54795891,126.9842371),
-content: '<div style="padding:5px;">서울특별시 용산구 소월로168번지(대한민국고엽제전우회앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 하얏트호텔 정문앞 마을버스정류장(용산03)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 3번 출구 앞( 직진2~3미터횡단보도앞 )'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 3번 출구 앞( 직진2~3미터횡단보도앞 )'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원입구(수지스건너편) 공중화장실앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원입구(수지스건너편) 공중화장실앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-189) 아디다스 OFS점 앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-189) 아디다스 OFS점 앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-188)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원버스정류장(03-188)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국제아케이드건물 앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국제아케이드건물 앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 ABC마트(신발가게)앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 ABC마트(신발가게)앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 미스전콜렉션앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 미스전콜렉션앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 해밀턴호텔 버스정류장(03-190)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 해밀턴호텔 버스정류장(03-190)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원역 2번 출구 (해밀턴호텔정문앞횡단보도)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원역 2번 출구 (해밀턴호텔정문앞횡단보도)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원역 3번 출구 (올리브영 횡단보도앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원역 3번 출구 (올리브영 횡단보도앞)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원소방서건너편사거리 뉴욕콜롬비아치과앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원소방서건너편사거리 뉴욕콜롬비아치과앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원 119 안전센타 버스정류장(03-192)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원 119 안전센타 버스정류장(03-192)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 제일기획실앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 제일기획실앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 시화담그릴(이태원로254(한남동683-130)앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 시화담그릴(이태원로254(한남동683-130)앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.27633518,127.3611005),
-content: '<div style="padding:5px;">서울특별시 용산구 삼성미술관 리움 택시정류장(폭스바겐건너편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.27633518,127.3611005),
-content: '<div style="padding:5px;">서울특별시 용산구 삼성미술관 리움 택시정류장(폭스바겐건너편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원광장 녹사평역방향 횡단보도(좌측)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원광장 녹사평역방향 횡단보도(좌측)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산구청 셔틀버스 정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산구청 셔틀버스 정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
-content: '<div style="padding:5px;">서울특별시 용산구 보광동입구(한국폴리텍1대학방면) 버스정류장(03-283)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52688166,127.0005741),
-content: '<div style="padding:5px;">서울특별시 용산구 보광동입구(한국폴리텍1대학방면) 버스정류장(03-283)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강진역 블루스퀘어 버스정류장(03-197)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강진역 블루스퀘어 버스정류장(03-197)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(블루스퀘어방면) 버스정류장(03-162)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(블루스퀘어방면) 버스정류장(03-162)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 순천향대학병원(서초IC방면) 버스정류장(03-164)'
-},
-{
-title:'한남오거리(신사역방면) 버스정류장(03-165)"',
-latlng: new kakao.maps.LatLng(129.0571699,한남오거리(신사역방면) 버스정류장(03-165)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'한남오거리(신사역방면) 버스정류장(03-165)"',
-latlng: new kakao.maps.LatLng(129.0571699,한남오거리(신사역방면) 버스정류장(03-165)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 한남오거리 하나은행앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.58648813,129.0571699),
-content: '<div style="padding:5px;">서울특별시 용산구 한남오거리 하나은행앞 횡단보도'
-},
-{
-title:'03-001))"',
-latlng: new kakao.maps.LatLng(126.9804724,03-001))"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-002)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-002)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 03-003)"',
-latlng: new kakao.maps.LatLng(126.9804724, 03-003)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-004)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-004)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-004)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-004)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-007)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-007)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-008)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-008)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-008)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-008)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-008)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-008)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-009)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-009)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-010)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-010)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-011)"',
-latlng: new kakao.maps.LatLng(126.9715704,03-011)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-012)"',
-latlng: new kakao.maps.LatLng(126.9715704,03-012)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53884125,126.991128),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원2동 용산한신아파트앞(해방촌방면) 버스정류장(03-150)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53884125,126.991128),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원2동 용산한신아파트앞(해방촌방면) 버스정류장(03-150)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 삼각지(보훈청방향)평양집앞 공원쉼터'
-},
-{
-title:' 재활용수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 삼각지(보훈청방향)평양집앞 공원쉼터'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국방부앞 버스정류장(국방부민원실)(03-185)'
-},
-{
-title:' 재활용수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 국방부앞 버스정류장(국방부민원실)(03-185)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 전쟁기념관(용산보건분소방면) 버스정류장(03-184)'
-},
-{
-title:' 재활용수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 전쟁기념관(용산보건분소방면) 버스정류장(03-184)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-186)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 1번출구앞 버스정류장(03-186)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 4번 출구 앞 버스정류장(03-187)'
-},
-{
-title:' 재활용수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역 4번 출구 앞 버스정류장(03-187)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역 버스정류장(03-255)(용산역앞광장)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역 버스정류장(03-255)(용산역앞광장)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역광장앞(신용산지하차도방면) 버스정류장(03-258) '
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 삼각지역11번출구 버스정류장(03-328남영역방면)(용산역파출소옆)'
-},
-{
-title:'서빙고역건너편)"',
-latlng: new kakao.maps.LatLng(126.9804724,서빙고역건너편)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'서빙고역앞)"',
-latlng: new kakao.maps.LatLng(126.9804724,서빙고역앞)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'GS편의점)  "',
-latlng: new kakao.maps.LatLng(126.9804724,GS편의점)  "),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 삼구빌딩 건너편)"',
-latlng: new kakao.maps.LatLng(126.9804724, 삼구빌딩 건너편)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 하나은행숙대입구역지점앞)"',
-latlng: new kakao.maps.LatLng(126.9804724, 하나은행숙대입구역지점앞)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 삼성디지탈서비스센터옆)"',
-latlng: new kakao.maps.LatLng(126.9715704, 삼성디지탈서비스센터옆)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 여행박사앞)"',
-latlng: new kakao.maps.LatLng(126.9725935, 여행박사앞)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54302455,126.9733195),
-content: '<div style="padding:5px;">서울특별시 용산구 남영동 청도양꼬치남영점앞 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 리버힐삼성아파트옆GS25시편의점앞횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산전자상가입구 버스정류장(03-250)'
-},
-{
-title:' 보건분소 버스정류장(03-181)"',
-latlng: new kakao.maps.LatLng(126.9804724, 보건분소 버스정류장(03-181)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한남나들목(A) 출입구앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한남나들목(B) 출입구앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 크라운해태 건너편 USO건너편인도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 크라운해태 건너편 USO건너편인도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52374199,126.9620444),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 숙대입구역2번출구앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52374199,126.9620444),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 숙대입구역2번출구앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 갈월동 청파동입구교차로(쌍굴다리)안 공원(갑을빌딩 맞은편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53698366,126.9745278),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 갈월동청파동 입구교차로(쌍굴다리)안 공원(갑을빌딩 맞은편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
-content: '<div style="padding:5px;">서울특별시 용산구 남영삼거리 동원부동산앞 횡단보도(고려빌딩 건너편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
-content: '<div style="padding:5px;">서울특별시 용산구 남영삼거리 동원부동산앞 횡단보도(고려빌딩 건너편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산역 삼거리 횡단보도앞(신용산역 5번출구 뒷편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.75467623,126.4241385),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산역 삼거리 횡단보도앞(신용산역 5번출구 뒷편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.55454856,126.9728045),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역앞교차로 아우디한강대로전시장앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.55454856,126.9728045),
-content: '<div style="padding:5px;">서울특별시 용산구 용산역앞교차로 아우디한강대로전시장앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원주공아파트 담벽인도 남산공원이정표앞'
-},
-{
-title:'"서울특별시 용산구 서울시중부기술교육원',
-latlng: new kakao.maps.LatLng(한남오거리방면)(03161)",블루스퀘어(순천향대학병원),
-content: '<div style="padding:5px;">37.53114116'
-},
-{
-title:'"서울특별시 용산구 서울시중부기술교육원',
-latlng: new kakao.maps.LatLng(한남오거리방면)(03161)",블루스퀘어(순천향대학병원),
-content: '<div style="padding:5px;">37.53114116'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한강중학교(금호베스트빌앞방면)버스정류장(03-269)'
-},
-{
-title:'용산노인종합복지관방면)버스정류장(03-274)"',
-latlng: new kakao.maps.LatLng(126.9957871,용산노인종합복지관방면)버스정류장(03-274)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'용산동아파트(114공인중개사사무소앞) 버스정류장(03-149)"',
-latlng: new kakao.maps.LatLng(126.991128,용산동아파트(114공인중개사사무소앞) 버스정류장(03-149)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 전자랜드(원효대교북단방면)버스정류장(03-137)"',
-latlng: new kakao.maps.LatLng(126.9804724, 전자랜드(원효대교북단방면)버스정류장(03-137)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 원효2동산호아파트(청암동강변삼성아파트방면)버스정류장(03-300)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54083138,126.9570712),
-content: '<div style="padding:5px;">서울특별시 용산구 백범로 효창공원역4번출구앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 BMW 한독모터스용산전시장 횡단보도앞'
-},
-{
-title:'4번출구앞(군선도가게앞)"',
-latlng: new kakao.maps.LatLng(126.9804724,4번출구앞(군선도가게앞)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(35.11564857,126.6991514),
-content: '<div style="padding:5px;">서울특별시 용산구 서빙고신동아아파트/신동아아파트버스정류장(03226)'
-},
-{
-title:'03-005)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-005)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-005)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-005)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-006)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-006)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:'03-006)"',
-latlng: new kakao.maps.LatLng(126.9804724,03-006)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산푸르지오써밋오피스텔(해림턴부동산과스타부동산)앞 인도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산푸르지오써밋오피스텔(서울창조경제혁신센터)앞 인도'
-},
-{
-title:' 전자랜드(용산전자상가12동방면)버스정류장(03136)"',
-latlng: new kakao.maps.LatLng(126.9804724, 전자랜드(용산전자상가12동방면)버스정류장(03136)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 신용산지하차도(용산전자상가입구방면)버스정류장(03251)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산꿈나무종합타원(용산경찰서방면)버스정류장(03346)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53714128,126.9691998),
-content: '<div style="padding:5px;">서울특별시 용산구 문배동이안아파트앞(문배어린이공원방면)버스정류장(03332)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 금양초등학교앞횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.5435614,126.9597807),
-content: '<div style="padding:5px;">서울특별시 용산구 국민은행효창동지점(숙명여대정문방면)버스정류장(03240)'
-},
-{
-title:' 이봉창활동터(효창공원후문방면)버스정류장(03235)"',
-latlng: new kakao.maps.LatLng(126.9804724, 이봉창활동터(효창공원후문방면)버스정류장(03235)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 서부역건너편 미니스톱서울역점 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 용산세무서(용산공고방면)버스정류장((03262)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 기능장애인협회용산지부앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 GS25용산서빙고점(서빙고초등학교)앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 녹사평역3번출구 200M전방(용산구청방향) 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 미군부대정문앞 횡단보도(한강중학교방면)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 금호베스트빌앞(서빙고초등학교방면)버스정류장(03270)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 KY빌딩앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원랜드앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
-content: '<div style="padding:5px;">서울특별시 용산구 한남동 대성표구사앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
-content: '<div style="padding:5px;">서울특별시 용산구 한남동새마을금고(이태원119안전센터방면)버스정류장(03194)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53746041,127.0063494),
-content: '<div style="padding:5px;">서울특별시 용산구 한남동 올리브영한남동점(제일기획건너편)앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.54302455,126.9733195),
-content: '<div style="padding:5px;">서울특별시 용산구 남영동주민센터(남영우체국방면)버스정류장(03206)'
-},
-{
-title:'포르쉐센터용산(이촌2동쥔센터방면)버스정류장(03-289)"',
-latlng: new kakao.maps.LatLng(126.9804724,포르쉐센터용산(이촌2동쥔센터방면)버스정류장(03-289)"),
-content: '<div style="padding:5px;">인근좌표'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 강촌apt/신용산초등학교(이촌동점보아파트방면)버스정류장(03-220)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 한국철도공사(코레일서울본부)앞 모범택시정류장'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 우아한청년들앞 횡단보도'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 이태원 지샥 패션잡화점 횡단보도앞'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.53114116,126.9804724),
-content: '<div style="padding:5px;">서울특별시 용산구 서빙고초등학교 담벽 가로등주변(남영비비안 본사 건너편)'
-},
-{
-title:' 일반쓰레기수거용 ',
-latlng: new kakao.maps.LatLng(37.52743799,126.9653798),
-content: '<div style="padding:5px;">서울특별시 용산구 한강대로 69(용산써밋오피스텔 정문앞 인도)'
 },
 
 

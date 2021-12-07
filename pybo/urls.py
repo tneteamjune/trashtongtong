@@ -14,8 +14,9 @@ urlpatterns = [
     path('greenpoint/', views.greenpoint, name='greenpoint'),
     path('points_list/', views.points_list, name='points_list'),
     path('greenpoint/<int:id>', views.points_detail, name="points_detail"),
-    path('plastic/' ,views.plastic, name='plastic'),
-    path('glass/' ,views.glass, name='glass'),
-    path('balpo/' ,views.balpo, name='balpo'),
-    path('vinyl/' ,views.vinyl, name='vinyl'),
+    path('points_get/', views.points_get, name='points_get'),
+    path('tip/plastic/' ,views.plastic, name='plastic'),
+    path('tip/glass/' ,views.glass, name='glass'),
+    path('tip/balpo/' ,views.balpo, name='balpo'),
+    path('tip/vinyl/' ,views.vinyl, name='vinyl'),
    ]

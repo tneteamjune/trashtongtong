@@ -4,6 +4,18 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import transaction
 from django.utils import timezone
+import hashlib
+
+def hashKey():
+    ck = CurrentKey.objects.first()
+    print(ck)
+    ck.currentKey = ck.currentKey + 1
+    ck.save()
+    return hashlib.sha256(str(ck.currentKey).encode('utf-8')).hexdigest()
+
+def hashUserNo(string):
+    return hashlib.sha256(str(hashlib.sha256(str(string+"iwannabetheboshy").encode('utf-8')).hexdigest()+"donotdisturb").encode('utf-8')).hexdigest()
+
 
 now = timezone.now()
 
@@ -53,5 +65,24 @@ def create_user_points(sender, instance, created, **kwargs):
         obj.reason = "welcome point"
         obj.save()
 
+class MeetingKey(models.Model):
+    meetingKey = models.CharField(max_length=64, default=hashKey)
+    name = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    points = models.IntegerField(default=0)
+    desc = models.TextField()
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('meetingList', kwargs={'pk' : self.id})
+
+class MeetingEntry(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    meeting = models.ForeignKey(MeetingKey, on_delete=models.CASCADE, null=True)
 
 
