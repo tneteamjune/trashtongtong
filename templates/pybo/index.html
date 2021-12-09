@@ -91,7 +91,7 @@
                 center: new kakao.maps.LatLng(36.332208, 127.434075), // 지도의 중심좌표 //대전역
                 level: 7, // 지도의 확대 레벨
             }; 
-        if (navigator.geolocation) {
+        {% comment %} if (navigator.geolocation) {
         
         // GeoLocation을 이용해서 접속 위치를 얻어옵니다
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -113,7 +113,7 @@
             message = 'geolocation을 사용할수 없어요..'
             
         displayMarker(locPosition, message);
-    }
+    } {% endcomment %}
 
     // 지도에 마커와 인포윈도우를 표시하는 함수입니다
     function displayMarker(locPosition, message) {
@@ -143,7 +143,7 @@
         var map = new kakao.maps.Map(mapContainer, mapOption); 
 
 
-        //선지연습
+        {% comment %} //선지연습
         //gps허용요청하여 위치 잡아주기
         var gps_use = null; //gps의 사용가능 여부
         var gps_lat = null; // 위도
@@ -164,14 +164,12 @@
             }
         }
 
-
         // gps 이용 가능 시, 위도와 경도를 반환하는 showlocation함수.
         function showLocation(position) {
             gps_use = true;
             gps_lat = position.coords.latitude;
             gps_lng = position.coords.longitude;
         }
-
 
         // error발생 시 에러의 종류를 알려주는 함수.
         function errorHandler(error) {
@@ -198,7 +196,7 @@
             gps_check();
             }
         }
-        //선지연습
+        //선지연습 {% endcomment %}
 
 
         
@@ -4808,7 +4806,7 @@
             '                <div class="ellipsis">'+ positions[i].content + '</div>' + 
             '                <div class="jibun ellipsis">'+ positions[i].latlng + '</div>' + 
             '           </br>' + 
-            '                <div><a href="{% url 'pybo:notice' %}" target="_blank" class="link">오류신고 게시판</a></div>' + 
+            '                <div><a href="{% url 'pybo:camera' %}" target="_blank" class="link">오류신고 게시판</a></div>' + 
             '            </div>' + 
             '        </div>' + 
             '    </div>' +    

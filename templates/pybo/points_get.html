@@ -10,10 +10,12 @@
         {% csrf_token %}
         {% include "form_errors.html" %}
         <div class="form-group">
-            <label for="username">사용자ID</label>
-            <input type="text" class="form-control" name="username" id="username"
+            <label for="user">사용자ID</label>
+            <input type="text" class="form-control" name="user" id="user"
                    readonly value="{{ user.username |default_if_none:'user.username' }}">
         </div>
+        <input type="text" class="form-control" name="username" id="username"
+        readonly value="{{ user.username |default_if_none:'user.username' }}">
         <button type="submit" class="btn btn-primary">점수주세요</button>
     </form>
 </div>

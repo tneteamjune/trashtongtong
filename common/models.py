@@ -44,7 +44,7 @@ def save_user_profile(sender, instance, **kwargs):
 
 class PointsEntry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=timezone.now)
     points = models.IntegerField(null=True)
     reason = models.TextField(null=True)
 
@@ -65,24 +65,24 @@ def create_user_points(sender, instance, created, **kwargs):
         obj.reason = "welcome point"
         obj.save()
 
-class MeetingKey(models.Model):
-    meetingKey = models.CharField(max_length=64, default=hashKey)
-    name = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
-    points = models.IntegerField(default=0)
-    desc = models.TextField()
+# class MeetingKey(models.Model):
+#     meetingKey = models.CharField(max_length=64, default=hashKey)
+#     name = models.TextField()
+#     date = models.DateTimeField(auto_now_add=True)
+#     points = models.IntegerField(default=0)
+#     desc = models.TextField()
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+#     def save(self, *args, **kwargs):
+#         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
-    def get_absolute_url(self):
-        return reverse('meetingList', kwargs={'pk' : self.id})
+#     def get_absolute_url(self):
+#         return reverse('meetingList', kwargs={'pk' : self.id})
 
-class MeetingEntry(models.Model):
-    student = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    meeting = models.ForeignKey(MeetingKey, on_delete=models.CASCADE, null=True)
+# class MeetingEntry(models.Model):
+#     student = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+#     meeting = models.ForeignKey(MeetingKey, on_delete=models.CASCADE, null=True)
 
 

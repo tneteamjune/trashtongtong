@@ -30,6 +30,9 @@ def balpo(request):
 def vinyl(request):
     return render(request,'pybo/tip/vinyl.html')
 
+def camera(request):
+    return render(request, 'pybo/camera.html')
+
 # def mypage(request):
 #     return render(request, 'pybo/mypage.html')
 
@@ -227,34 +230,37 @@ def create_user_points(sender, instance, created, **kwargs):
         obj.save()
 
 @login_required(login_url='common:login')
-def points_get(request):
-    form = PointsForm(request.POST or None)
+def points_get(request, instance):
     if request.method == "POST":
-        form = PointsForm(request.POST)
+        obj = PointsEntry.objects.create(user = instance)
+        obj.user = request.user.id
+        obj.points = 10
+        obj.reason = "get 10 points!"
+        obj.save()
     
-        if form.is_valid():
-            formInput = form.cleaned_data
-            newID = hashUserNo(formInput['user'])
-            if User.objects.filter(userNo=newID).exists() == False:
-                newID = hashUserNo(formInput['user'])
-                newUser = User(userNo=formInput['user'], firstName=(formInput['firstName']).lower(), lastName=(formInput['lastName']).lower(), points=0)
-                newUser.save()
+    #     if form.is_valid():
+    #         formInput = form.cleaned_data
+    #         newID = hashUserNo(formInput['username'])
+    #         if User.objects.filter(userNo=newID).exists() == False:
+    #             newID = hashUserNo(formInput['username'])
+    #             newUser = User(userNo=formInput['username'], firstName=(formInput['firstName']).lower(), lastName=(formInput['lastName']).lower(), points=0)
+    #             newUser.save()
         
-        # currentUser = User.objects.filter(userNo=request.user.id).first()
+    #     # currentUser = User.objects.filter(userNo=request.user.id).first()
 
-        # for object in PointsEntry.objects.filter(user=request.user.id):
-        #     if object.reason == pointentry.reason :
-        #         # raise ValidationError(_('Points already added.'))
-        #         return HttpResponse('Points already added.')
+    #     # for object in PointsEntry.objects.filter(user=request.user.id):
+    #     #     if object.reason == pointentry.reason :
+    #     #         # raise ValidationError(_('Points already added.'))
+    #     #         return HttpResponse('Points already added.')
 
-        messages.success(request, 'Request submitted succesfully!')
-        form.save()
-        form = PointsForm()
-        # Save the form. Also adds a point entry
-    context = {
-        'form' : form,
-    }
-    return render(request, 'pybo/points_get.html', context)
+    #         messages.success(request, 'Request submitted succesfully!')
+    #         form.save()
+    #         form = PointsForm()
+    #     # Save the form. Also adds a point entry
+    # context = {
+    #     'form' : form,
+    # }
+    return render(request, 'pybo/points_get.html')
 
 
 def points_entrys(request):
@@ -299,3 +305,8 @@ def points_entrys(request):
         'form' : form,
     }
     return render(request, 'points/entry.html', context)
+
+
+
+
+
